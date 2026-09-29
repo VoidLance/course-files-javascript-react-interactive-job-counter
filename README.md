@@ -1,70 +1,111 @@
-# Getting Started with Create React App
+# Interactive Job Counter
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A small React application for tracking jobs interactively in the browser. The
+default view uses the advanced counter, which lets you add and remove jobs,
+reset the list, and switch between Development and Production environments.
 
-## Available Scripts
+## Why use it?
 
-In the project directory, you can run:
+- Track a live job count without a backend or external services.
+- Add and remove individual jobs from the rendered list.
+- Reset the counter when starting a new batch.
+- Switch the displayed environment to represent different workflows.
+- Use the project as a straightforward example of React state and event
+  handling.
 
-### `npm start`
+## Getting started
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Prerequisites
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Node.js 18 or a newer LTS release
+- npm (included with Node.js)
 
-### `npm test`
+### Installation
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Clone the repository, enter the project directory, and install its dependencies:
 
-### `npm run build`
+```bash
+git clone https://github.com/VoidLance/course-files-javascript-react-interactive-job-counter.git
+cd course-files-javascript-react-interactive-job-counter
+npm install
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Run the app
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Start the development server:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+npm start
+```
 
-### `npm run eject`
+Open [http://localhost:3000](http://localhost:3000) in a browser. The page
+reloads automatically as you edit the source files.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Use the counter
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. Select **Add Job** to append a job to the list.
+2. Select **Remove** beside a job to delete that job.
+3. Select **Reset Jobs** to clear all jobs.
+4. Select **Switch Environment** to toggle between Development and Production.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+The counter message changes as the number of jobs changes: zero jobs, a few
+jobs (fewer than five), or many jobs (five or more).
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Development commands
 
-## Learn More
+Run these commands from the project directory:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+| Command | Purpose |
+| --- | --- |
+| `npm start` | Start the development server on port 3000. |
+| `npm test` | Run the test suite in interactive watch mode. |
+| `npm run build` | Create an optimized production build in `build/`. |
+| `npm run eject` | Expose the Create React App configuration. This is irreversible. |
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Project structure
 
-### Code Splitting
+```text
+src/
+├── App.js                 # Application entry component
+├── AdvancedJobCounter.js  # Main counter UI and state logic
+├── JobCounter.js          # Basic counter example
+├── App.css                # Application styles
+└── index.js               # React bootstrap
+public/                    # Static assets and the HTML shell
+package.json               # Scripts and dependencies
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+The application is built with React and Create React App. The main component
+is `src/AdvancedJobCounter.js`; `src/JobCounter.js` is retained as a simpler
+counter example.
 
-### Analyzing the Bundle Size
+## Support
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+For questions or problems:
 
-### Making a Progressive Web App
+- Check the [React documentation](https://react.dev/learn).
+- Check the [Create React App documentation](https://create-react-app.dev/docs/getting-started/).
+- [Open an issue](https://github.com/VoidLance/course-files-javascript-react-interactive-job-counter/issues)
+  with steps to reproduce the problem and the command you ran.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Contributing
 
-### Advanced Configuration
+Contributions are welcome. To propose a change:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+1. Fork the repository and create a focused branch.
+2. Install dependencies with `npm install`.
+3. Make the change and add or update tests where appropriate.
+4. Run `npm test` and `npm run build`.
+5. Open a pull request describing the change and validation performed.
 
-### Deployment
+Please keep pull requests focused and follow the existing JavaScript and React
+patterns in `src/`.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Maintainer
 
-### `npm run build` fails to minify
+This project is maintained by [VoidLance](https://github.com/VoidLance).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## License
+
+No license file is currently included. Contact the maintainer before
+redistributing or reusing the project.
